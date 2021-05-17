@@ -298,19 +298,19 @@ html {
 }
 
 .img1 {
-    background: url(images/bs2.png);
+    background: url('{{ STATIC_URL }}/images/bs2.jpg');
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
 }
 
 .img2 {
-    background: url(images/bs2.png);
+    background: url('static/user_sys/bs2.png');
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
 }
 
 .img3 {
-    background: url(images/media-room-basement-remodel-6.jpg);
+    background: url(usersys/media-room-basement-remodel-6.jpg);
     background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
 }

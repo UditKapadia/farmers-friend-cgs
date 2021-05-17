@@ -1,4 +1,8 @@
-{% extends 'user_sys/base.html' %} {% block title %}Home Page{% endblock title %}
+{% extends 'user_sys/base.html' %} 
+{% block title %}Home Page{% endblock title %}
+
+{% block body %}
+{% load static %}
 <!-- Swiper -->
 <div class="swiper-container">
 
@@ -156,3 +160,4 @@
 <div class="Contact-button">
     <img src="images/icons8-phone.svg" height="30px" id="phone-image">
 </div>
+{% endblock body %}
