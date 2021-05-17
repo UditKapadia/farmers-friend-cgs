@@ -26,3 +26,18 @@ def weather_forecast(request):
 def farm_ed(request):
     context = {}
     return render(request, "user_sys/farm_ed.html", context)
+
+
+def video_gallery(request):
+    context = {}
+    return render(request, "user_sys/video_gal.html", context)
+
+
+def login(request):
+    context = {}
+    return render(request, "user_sys/login.html", context)
+
+
+def register(request):
+    context = {}
+    return render(request, "user_sys/register.html", context)
