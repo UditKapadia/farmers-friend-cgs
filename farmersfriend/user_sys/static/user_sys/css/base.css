@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,600;0,700;1,400&display=swap");
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: white;
+    font-family: "Montserrat", sans-serif;
+    --color-2: #ffdc74;
+}
+
+body {
+    color: var(--color-1);
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav a::before {
+    content: "";
+    display: block;
+    height: 1.5px;
+    background: #ffdc74;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -0.25em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 300ms;
+}
+
+nav a:hover::before {
+    transform: scale(1, 1);
+}
+
+nav a:hover {
+    color: #ffdc74;
+}
+
+.header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding-inline: 4rem;
+    z-index: 100;
+    border-bottom: 1px solid rgba(240, 240, 240, 0.8);
+}
+
+.logo {
+    width: 20%;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+nav {
+    width: 80%;
+    font-size: 0.75rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.Contact-button {
+    display: none;
+}
+
+.contact-links {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .header {
+        text-align: center;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .logo {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    nav {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .burger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .burger div {
+        transition: all 0.3s ease;
+    }
+    .line1 {
+        height: 2.2px;
+        width: 30px;
+        background-color: white;
+        margin: 2px;
+    }
+    .line2 {
+        height: 2.4px;
+        width: 20px;
+        background-color: white;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-left: 10px;
+    }
+    .line3 {
+        height: 2.2px;
+        width: 30px;
+        background-color: white;
+        margin: 2.2px;
+    }
+    .cross .line1 {
+        transform: rotate(-45deg) translate(-2px, 11px);
+    }
+    .cross .line2 {
+        opacity: 0;
+    }
+    .cross .line3 {
+        transform: rotate(45deg) translate(2px, -7.5px);
+    }
+    nav {
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    nav li {
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+    }
+    nav a:hover {
+        color: #ffdc74;
+    }
+    .toggle {
+        transform: scale(1, 1);
+    }
+    .toggle a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+    .Contact-button {
+        display: block;
+        z-index: 2000;
+        position: fixed;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #ffdc74;
+        bottom: 20px;
+        right: 5%;
+    }
+    .contact-links div {
+        opacity: 0;
+        position: fixed;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: #ffdc74;
+        right: 5%;
+        z-index: 2000;
+        margin: 0.15rem;
+        padding: 0.3rem;
+        padding-bottom: 0.4rem;
+        transition: transform 0.5s ease-in;
+    }
+    .contact-links .phone {
+        opacity: 0;
+        bottom: 70px;
+    }
+    .contact-links .message {
+        opacity: 0;
+        bottom: 117px;
+    }
+    .contact-links .email {
+        opacity: 0;
+        bottom: 164px;
+    }
+    .contact-links .whatsapp {
+        opacity: 0;
+        bottom: 211px;
+    }
+    .Contact-button img {
+        margin: 0.335rem;
+        margin-right: 0.15rem;
+    }
+}
+
+
+/* Swiper css */
+
+html {
+    position: relative;
+    height: 100%;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-pagination {
+    z-index: 100000;
+}
+
+.swiper-container .swiper-button-next {
+    color: rgb(8, 8, 8);
+}
+
+.swiper-container .swiper-button-prev {
+    color: rgb(8, 8, 8);
+}
+
+.swiper-container .swiper-pagination-bullet {
+    color: black;
+}
+
+.swiper-slide {
+    /* text-align: center; */
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-blend-mode: multiply;
+}
+
+.img1 {
+    background: url(images/bs2.png);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img2 {
+    background: url(images/bs2.png);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img3 {
+    background: url(images/media-room-basement-remodel-6.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img4 {
+    background: url(images/renovated-basement-ideas-add-flair-with-arches.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img5 {
+    background: url(images/renovated-basement-ideas-drop-ceilings.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img6 {
+    background: url(images/renovated-basement-ideas-entertain-guests-wet-bar.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img7 {
+    background: url(images/renovated-basement-ideas-include-good-lighting.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img8 {
+    background: url(images/renovated-basement-ideas-small-apartment.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.img9 {
+    background: url(images/renovated-basement-ideas-storage-is-a-must.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10rem;
+    color: #ffdc74;
+}
+
+.section-sub-title {
+    margin-top: 1rem;
+    font-weight: normal;
+    color: white;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+    .content-container {
+        font-size: 0.7rem;
+        padding: 4rem;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@keyframes linksFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes linksFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes mainButtonIn {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@keyframes mainButtonOut {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
