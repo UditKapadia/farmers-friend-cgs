@@ -1,2 +1,7 @@
-{% extends 'user_sys/base.html' %}
-{% block title %}Weather Forecast{% endblock title %}
+{% extends 'user_sys/base.html' %} {% load static %} {% block title %}Weather Forecast{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/weather.css' %}"> {% endblock head %} {% block body %}
+<form action="" method="POST">{% csrf_token %}
+    <input class="weather" type="text" name="cityName" id="">
+    <input type="submit" value="save">
+</form>
+{% endblock body %}

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import requests
-
+from .forms import WeatherForm
 # Create your views here.
 
 
@@ -22,9 +22,17 @@ def market(request):
 def weather_forecast(request):
     url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=2ebe62ad7ad9ab7bf60a9e5bf054180e'
     city = 'Ahmedabad'
-    r=requests.get(url.format(city))
-    print(r.text)
-    context = {}
+    r=requests.get(url.format(city)).json()
+    # print(r.text)
+    city_weather = {
+        'city': city,
+        'temperature' : r['main']['temp'],
+        'description' : r['weather'][0]['description'],
+    }
+    print(city_weather)
+    context = {
+        'city_weather' : city_weather,
+    }
     return render(request, "user_sys/weather_forecast.html", context)
 
 
