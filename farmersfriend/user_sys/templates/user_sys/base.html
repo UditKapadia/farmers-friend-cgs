@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Farmer's Friend</title>
     <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
@@ -14,7 +14,7 @@
 <body>
     <div class=header>
         <h2 class=logo>
-            Farmer's Friend 
+            Farmer's Friend
         </h2>
         <div class="burger" id="burger">
             <div class="line1"></div>
@@ -23,11 +23,11 @@
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li> <a href="#">Farmers</a></li>
-                <li> <a href="#">scientific laboratory</a></li>
-                <li><a href="#">weather forecast </a></li>
-                <li><a href="#">Gallery</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li> <a href="{% url 'farm_ed' %}">Farmers</a></li>
+                <li> <a href="{% url 'scientific_labs' %}">scientific laboratory</a></li>
+                <li><a href="{% url 'weather_forecast' %}">weather forecast </a></li>
+                <li><a href="{% url 'video_gallery' %}">Gallery</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About Us</a></li>
             </ul>

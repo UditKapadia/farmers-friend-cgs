@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import requests
 
 # Create your views here.
 
@@ -10,7 +11,7 @@ def index(request):
 
 def scientific_labs(request):
     context = {}
-    return render(request, "user_sys/scientific_lab.html", context)
+    return render(request, "user_sys/scientific_labs.html", context)
 
 
 def market(request):
@@ -19,6 +20,10 @@ def market(request):
 
 
 def weather_forecast(request):
+    # url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=2ebe62ad7ad9ab7bf60a9e5bf054180e'
+    # city = 'Ahmedabad'
+    # r=requests.get(url.format(city))
+    # print(r.text)
     context = {}
     return render(request, "user_sys/weather_forecast.html", context)
 
@@ -30,7 +35,7 @@ def farm_ed(request):
 
 def video_gallery(request):
     context = {}
-    return render(request, "user_sys/video_gal.html", context)
+    return render(request, "user_sys/video_gallery.html", context)
 
 
 def login(request):
