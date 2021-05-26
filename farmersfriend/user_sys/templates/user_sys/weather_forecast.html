@@ -3,10 +3,10 @@
 
 <form action="" method="POST">{% csrf_token %}
     <input class="weather" type="text" name="cityName" id="">
-    <input type="submit" value="save">
+    <input type="submit" value="show">
 </form>
-<p>{{city_weather.temperature}}</p>
-<p>{{city_weather.city}}</p>
-<p>{{city_weather.description}}</p>
+<p>City: {{city_weather.city}}</p>
+<p>Temperature: {{city_weather.temperature}} Cel</p>
+<p>Description: {{city_weather.description}}</p>
 
 {% endblock body %}
