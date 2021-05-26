@@ -20,10 +20,10 @@ def market(request):
 
 
 def weather_forecast(request):
-    # url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=2ebe62ad7ad9ab7bf60a9e5bf054180e'
-    # city = 'Ahmedabad'
-    # r=requests.get(url.format(city))
-    # print(r.text)
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&appid=2ebe62ad7ad9ab7bf60a9e5bf054180e'
+    city = 'Ahmedabad'
+    r=requests.get(url.format(city))
+    print(r.text)
     context = {}
     return render(request, "user_sys/weather_forecast.html", context)
 
