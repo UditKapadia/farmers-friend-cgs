@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+import requests
+from .forms import WeatherForm
+from .models import Weather
 # Create your views here.
 
 
@@ -10,7 +12,7 @@ def index(request):
 
 def scientific_labs(request):
     context = {}
-    return render(request, "user_sys/scientific_lab.html", context)
+    return render(request, "user_sys/scientific_labs.html", context)
 
 
 def market(request):
@@ -19,7 +21,28 @@ def market(request):
 
 
 def weather_forecast(request):
-    context = {}
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=2ebe62ad7ad9ab7bf60a9e5bf054180e'
+    
+
+    if request.method == 'POST':
+        form = WeatherForm(request.POST)
+        form.save()
+
+    form = WeatherForm()
+
+    city = Weather.objects.last()
+
+    r=requests.get(url.format(city)).json()
+    print(r)
+    city_weather = {
+        'city': city,
+        'temperature' : r['main']['temp'],
+        'description' : r['weather'][0]['description'],
+    }
+    # print(city_weather)
+    context = {
+        'city_weather' : city_weather,
+    }
     return render(request, "user_sys/weather_forecast.html", context)
 
 
@@ -30,7 +53,7 @@ def farm_ed(request):
 
 def video_gallery(request):
     context = {}
-    return render(request, "user_sys/video_gal.html", context)
+    return render(request, "user_sys/video_gallery.html", context)
 
 
 def login(request):

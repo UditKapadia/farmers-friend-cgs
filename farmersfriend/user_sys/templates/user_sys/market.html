@@ -1,5 +1,2 @@
-{% extends 'user_sys/base.html' %}
-{% block title %}Markets{% endblock title %}
-{% block body %} This is market page
-
-{% endblock body %}
+{% extends 'user_sys/base.html' %} {% load static %} {% block title %}Market Page{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {% block body %} This is market page {% endblock body %}

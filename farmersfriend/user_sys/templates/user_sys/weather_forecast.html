@@ -1,2 +1,13 @@
-{% extends 'user_sys/base.html' %}
-{% block title %}Weather Forecast{% endblock title %}
+{% extends 'user_sys/base.html' %} {% load static %} {% block title %}Weather Forecast{% endblock title %} {% block head %}
+<!-- <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {% block body %} -->
+
+<div class="weather">
+    <form action="" method="POST">{% csrf_token %}
+        <input type="text" name="cityName" id="">
+        <input type="submit" value="show">
+    </form>
+    <p>City: {{city_weather.city}}</p>
+    <p>Temperature: {{city_weather.temperature}} Cel</p>
+    <p>Description: {{city_weather.description}}</p>
+</div>
+{% endblock body %}
