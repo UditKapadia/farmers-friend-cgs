@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-{% extends 'user_sys/base.html' %}{% load static %} 
-
-{% block title %}Query Form| Farm Education{% endblock title %} 
-
-{% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
-
-
-
-{% endblock head %}
-
-{%block body %}
-=======
 {% extends 'user_sys/base.html' %}{% load static %} {% block title %}Query Form| Farm Education{% endblock title %} {% block head %}
 <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {%block body %}
->>>>>>> 96299f09cedc90d98824d54060f03f016e2a0df3
 
 {% if messages %}
     {% for message in messages %}
@@ -41,6 +26,8 @@
                         {% csrf_token %}
                         <div class="col-md-12">
                             <input class="form-control" type="tel" name="phone" placeholder="Mobile Number" required>
+                            <div class="valid-feedback">Email field is valid!</div>
+                            <div class="invalid-feedback">Email field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
