@@ -11,120 +11,105 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
-      ul{
-          
-          width: 75%;
-          display: flex;
-           flex-wrap: nowrap;
-       justify-content: space-between;
-       align-items: center;
-      } 
-   
-   nav{
-   position: fixed;
- 
-   background-color: #215a32;
-   align-items: center;
-   width: 100%;
-   height: 9%;
-   font-size: medium;
-   padding-inline: 20rem;
-   border-bottom: 1px solid rgba(240, 240, 240, 0.8);
-   z-index: 100;
-   }
-
-   .navbar-header{ 
-       font-weight: bolder;
-       font-family: cursive;
-      
-   }
-
-   .a{
-       color: #ffffff;
-       font-style: none;
-   }
-   
-   nav ul a:hover {
-   color: #ffdc74;
-   
-  
-   }
-   </style>
+        ul {
+            width: 75%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav {
+            position: fixed;
+            background-color: #215a32;
+            align-items: center;
+            width: 100%;
+            height: 9%;
+            font-size: medium;
+            padding-inline: 20rem;
+            border-bottom: 1px solid rgba(240, 240, 240, 0.8);
+            z-index: 100;
+        }
+        
+        .navbar-header {
+            font-weight: bolder;
+            font-family: cursive;
+        }
+        
+        .a {
+            color: #ffffff;
+            font-style: none;
+        }
+        
+        nav ul a:hover {
+            color: #ffdc74;
+        }
+    </style>
 </head>
 
 
 <body>
-  
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+
         <div class="navbar-header">
-        
-            <h2 class="something a">Farmer's Friend</h2> 
-       
+
+            <h3 class="something a">Farmer's Friend</h3>
+
         </div>
-        
-        <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item">
-            <a class="nav-link a" href="{% url 'index' %}">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link a" href="{% url 'farm_ed' %}">Farmers</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link a" href="{% url 'weather_forecast' %}">Weather Forecast</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link a" href="{% url 'scientific_labs' %}">Scientific Laboratory </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link a" href="{% url 'market' %}">Markets</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link a" href="{% url 'video_gallery' %}">Gallery</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link a" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link a" href="#">About Us</a>
-        </li>
-        </ul>
-
-    </div>
-</nav>
+        <button class="navbar-toggler btn btn-warning" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
 
-    
-      {% block body %}{% endblock body %}
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
 
-      <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <li class="nav-item">
+                    <a class="nav-link a" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="{% url 'farm_ed' %}">Farmers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="{% url 'weather_forecast' %}">Weather Forecast</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="{% url 'scientific_labs' %}">Scientific Laboratory </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="{% url 'market' %}">Markets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="{% url 'video_gallery' %}">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">About Us</a>
+                </li>
 
-<!-- Initialize Swiper -->
-<script>
-  var swiper = new Swiper('.swiper-container', {
-      loop: true,
-      speed: 1000,
-      direction: 'horizontal',
-      navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-      },
-      pagination: {
-          el: '.swiper-pagination',
-      },
-      autoplay: {
-          delay: 5000,
-      },
-  });
-</script>
-<script src="{% static 'user_sys/js/base.js' %}"></script>
+            </ul>
+        </div>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        </div>
+    </nav>
+
+
+
+    {% block body %}{% endblock body %}
+
+
+    <script src="{% static 'user_sys/js/base.js' %}"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>
