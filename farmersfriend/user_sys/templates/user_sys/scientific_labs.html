@@ -7,14 +7,33 @@
 {% block body %}
 <div class="container" style="width:30%; padding:30px">
 <form >
+
+<div class="form-group" >
+    <label for="inputMobileNumber">Mobile Number</label>
+    <input type="tel" class="form-control" id="inputMobileNumber" aria-describedby="MobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}">
+  </div>
+
+
   <div class="form-group" >
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
   </div>
+
+
   <div class="form-group">
-    <label for="exampleInputPassword1"></label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="addressField">Address</label>
+    <input type="text" class="form-control" id="addressField" placeholder="Password">
   </div>
+
+
+  <div class="form-group mx-sm-3 mb-2">
+    <label for="addressField">City</label>
+    <input type="text" class="form-control" id="addressField" placeholder="Password">
+    <label for="addressField">State</label>
+    <input type="text" class="form-control" id="addressField" placeholder="Password">
+  </div>
+
+
   <div class="form-group">
     <label for="exampleInputPassword1">Soil Type</label>
   <select class="form-control">
@@ -30,17 +49,22 @@
   <option>I don't know</option>
 </select>
 </div>
+
+
 <div class="form-group">
     <label for="exampleInputPassword1">Category of Last Sown Crop</label>
   <select class="form-control">
+  <option>Select the Category</option>
   <option>Kharif</option>
   <option>Rabi</option>
   <option>Zaid</option>
   </select>
 </div>
-  <div class="form-check">
+
+
+  <div class="form-check p-3">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    <label class="form-check-label" for="exampleCheck1">I understand and agree to all the Terms and Conditions of this test. <a href="">Click here to know more</a> </label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

@@ -22,12 +22,12 @@
                 <div class="form-items">
                     <h3>Query Form</h3>
                     <p>Write Your Query Below</p>
-                    <form class="requires-validation" method="POST" action="" novalidate>
+                    <form class="requires-validation" method="POST" action="{% url 'farm_ed' %}" novalidate>
                         {% csrf_token %}
                         <div class="col-md-12">
                             <input class="form-control" type="tel" name="phone" placeholder="Mobile Number" required>
-                            <div class="valid-feedback">Email field is valid!</div>
-                            <div class="invalid-feedback">Email field cannot be blank!</div>
+                            <div class="valid-feedback">Contact is valid!</div>
+                            <div class="invalid-feedback">Contact field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
@@ -55,10 +55,9 @@
 
                             </div>
                         </div>
-
-
                         <div class="form-button mt-3">
                             <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+
                         </div>
                     </form>
                 </div>
