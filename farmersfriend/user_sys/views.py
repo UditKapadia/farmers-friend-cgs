@@ -53,7 +53,7 @@ def farm_ed(request):
 
 def video_gallery(request):
     context = {}
-    return render(request, "user_sys/video_gallery.html", context)
+    return render(request, "user_sys/videobar.html", context)
 
 
 def login(request):
