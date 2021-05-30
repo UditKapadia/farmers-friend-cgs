@@ -1,50 +1,25 @@
-{% extends 'user_sys/base.html' %}{% load static %} 
-
-{% block title %}Irrigation | Farm Education{% endblock title %} 
-
-{% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
-{% endblock head %}
-
-{%block body %}
+{% extends 'user_sys/base.html' %}{% load static %} {% block title %}Irrigation | Farm Education{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {%block body %}
 
 <div class="container-fluid tag1">
-
+    <h2>Different Irrigations Method</h2>
     <div class="card-deck" style="padding-top: 30px;">
         <div class="card">
-        <img class="card-img-top" src="/static/user_sys/images/surface.jpeg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Surface Irrigation</h5>
-            <p class="card-text">Water is scattered equally throughout the land with the help of gravitational pull and it doesn’t require a machine to take care of it. This consists of a vast amount of irrigation methods in which water is scattered, the things you need to have before you introduce the irrigation water to the basins are by siphons, gated pipe. This system is best suited for areas that have a parallel slope or flat surface and a moderate fine-textured soil type. This helps the surface to have water spread through it evenly as it moves down across the basin.</p>
-        </div>
-        </div>
-
-        <div class="card">
-        <img class="card-img-top" src="/static/user_sys/images/drip.jpeg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Drip Irrigation</h5>
-            <p class="card-text">In this process of drip irrigation, the water drops fall on the root of every plant that is around the system. The plants absorb the dropped water using their roots. In this process, the evaporation and runoff are minimized so we can ensure less water loss.</p>
-        </div>
-        </div>
-
-    </div>
-
-    <div class="card-deck" style="padding-top: 30px;">
-        <div class="card">
-        <img class="card-img-top" src="/static/user_sys/images/sprinkler.jpeg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Sprinkler Irrigation</h5>
-            <p class="card-text">Water is scattered throughout the land by high-pressure sprinklers or guns from the equator of the land or from a moving platform that would be sprinkled as it moves. 
-            </p>
-        </div>
-        </div>
-
-        <div class="card">
-            <img class="card-img-top" src="/static/user_sys/images/pivot.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="/static/user_sys/images/surface.jpeg" alt="Card image cap">
             <div class="card-body">
-            <h5 class="card-title">Center Pivot Irrigation</h5>
-            <p class="card-text">Water is scattered throughout the land by a machine of sprinklers that move on wheeled towers in 360 degrees pattern or a circle that would move around the land and sprinkle water all over the soil and it is really efficient and effective and this procedure or system is well recommended in a lot of countries but mostly used in the USA. 
-            </p>
+                <h5 class="card-title">Surface Irrigation</h5>
+                <p class="card-text">Water is scattered equally throughout the land with the help of gravitational pull and it doesn’t require a machine to take care of it. This consists of a vast amount of irrigation methods in which water is scattered, the things you need
+                    to have before you introduce the irrigation water to the basins are by siphons, gated pipe. This system is best suited for areas that have a parallel slope or flat surface and a moderate fine-textured soil type. This helps the surface
+                    to have water spread through it evenly as it moves down across the basin.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-img-top" src="/static/user_sys/images/drip.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Drip Irrigation</h5>
+                <p class="card-text">In this process of drip irrigation, the water drops fall on the root of every plant that is around the system. The plants absorb the dropped water using their roots. In this process, the evaporation and runoff are minimized so we can ensure
+                    less water loss.</p>
             </div>
         </div>
 
@@ -52,20 +27,45 @@
 
     <div class="card-deck" style="padding-top: 30px;">
         <div class="card">
-        <img class="card-img-top" src="/static/user_sys/images/lateral.jpeg" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Lateral Move Irrigation  </h5>
-            <p class="card-text">Water is scattered throughout the land evenly through a series of pipes or water lines, they can either be controlled by hands which could be less effective compared to a man-made machine for sprinkling water all over the land. The sprinkles move only a recommended distance on the field and for the next land, the Reconnection of the water hose is required to cover the next distance. Compared to the other irrigation systems, lateral move irrigation system tends to be way cheaper but requires a lot of labor or manpower. 
-            </p>
+            <img class="card-img-top" src="/static/user_sys/images/sprinkler.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Sprinkler Irrigation</h5>
+                <p class="card-text">Water is scattered throughout the land by high-pressure sprinklers or guns from the equator of the land or from a moving platform that would be sprinkled as it moves.
+                </p>
+            </div>
         </div>
+
+        <div class="card">
+            <img class="card-img-top" src="/static/user_sys/images/pivot.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Center Pivot Irrigation</h5>
+                <p class="card-text">Water is scattered throughout the land by a machine of sprinklers that move on wheeled towers in 360 degrees pattern or a circle that would move around the land and sprinkle water all over the soil and it is really efficient and effective
+                    and this procedure or system is well recommended in a lot of countries but mostly used in the USA.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card-deck" style="padding-top: 30px;">
+        <div class="card">
+            <img class="card-img-top" src="/static/user_sys/images/lateral.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Lateral Move Irrigation </h5>
+                <p class="card-text">Water is scattered throughout the land evenly through a series of pipes or water lines, they can either be controlled by hands which could be less effective compared to a man-made machine for sprinkling water all over the land. The sprinkles
+                    move only a recommended distance on the field and for the next land, the Reconnection of the water hose is required to cover the next distance. Compared to the other irrigation systems, lateral move irrigation system tends to be way
+                    cheaper but requires a lot of labor or manpower.
+                </p>
+            </div>
         </div>
 
         <div class="card">
             <img class="card-img-top" src="/static/user_sys/images/sub.jpeg" alt="Card image cap">
             <div class="card-body">
-            <h5 class="card-title">Sub-Irrigation</h5>
-            <p class="card-text">In this process, the surrounding water table is raised to scatter water evenly across the land. Methods like pumping stations, canals, gates,  ditches, and a few other systems are used to raise the water table. This irrigation method is one of the most effective for scattering water throughout the areas with a high water table. 
-            </p>
+                <h5 class="card-title">Sub-Irrigation</h5>
+                <p class="card-text">In this process, the surrounding water table is raised to scatter water evenly across the land. Methods like pumping stations, canals, gates, ditches, and a few other systems are used to raise the water table. This irrigation method is
+                    one of the most effective for scattering water throughout the areas with a high water table.
+                </p>
             </div>
         </div>
 
@@ -73,16 +73,21 @@
 </div>
 
 <style>
-
-    .tag1{
-      background-color: #9fcab1f2;
+    .tag1 {
+        background-color: #9fcab1f2;
+        padding-bottom: 100px;
     }
-
+    
+    h2 {
+        text-align: center;
+        color: #215a32;
+        padding-top: 20px;
+    }
 </style>
-    
 
 
 
 
-    
+
+
 {%endblock body %}

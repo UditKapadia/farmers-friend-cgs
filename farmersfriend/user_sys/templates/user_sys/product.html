@@ -1,135 +1,138 @@
-{% extends 'user_sys/base.html' %}{% load static %} 
+{% extends 'user_sys/base.html' %}{% load static %} {% block title %}Product & Equipments | Farm Education{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet"> {% endblock head %} {%block body %}
+<div class="product">
+    <h2>Different Products and Equipments</h2>
+    <div class="card tag3">
+        <img src="/static/user_sys/images/tractors.jpeg" class="card-img-top" height="350px" width="700px">
+        <div class="card-body">
+            <h5 class="card-title">Tractors</h5>
+            <p class="card-text">
+                To say that "tractor" is a broad category is an understatement. The tractor is ubiquitous in the farming world, and it comes in a range of sizes to fit any farming operation. The primary purpose of a tractor is to pull farm equipment, but modern tractors
+                can be outfitted with a variety of attachments to suit just about any farming need. For this reason, tractors are common-sense purchases for small and large-scale farmers alike.
 
-{% block title %}Product & Equipments | Farm Education{% endblock title %} 
-
-{% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
-{% endblock head %}
-
-
-{%block body %}
-
-<div class="card tag3">
-    <img src="/static/user_sys/images/tractors.jpeg" class="card-img-top" height="350px" width="700px">
-    <div class="card-body">
-      <h5 class="card-title">Tractors</h5>
-      <p class="card-text">
-        To say that "tractor" is a broad category is an understatement. The tractor is ubiquitous in the farming world, and it comes in a range of sizes to fit any farming operation. The primary purpose of a tractor is to pull farm equipment, but modern tractors can be outfitted with a variety of attachments to suit just about any farming need. For this reason, tractors are common-sense purchases for small and large-scale farmers alike.
-
-      </p>
-      <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
-    </div>
-  </div>
-
-<div class="card tag3">
-    <div class="card-body">
-        <h5 class="card-title">Seeders</h5>
-        <p class="card-text">Seeders, as the name would suggest, are designed to spread seeds across large plots of land quickly and efficiently. While small farms may use small mechanical seeders or even hand-seeding methods, tractor-pulled seeders are most commonly used in large-scale farms today. There are different machines used in agriculture seeding. </p>
-        <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
-    </div>
-    <img class="col-sm-6" src="/static/user_sys/images/seeders.jpeg" alt="sans" height="300px" width="250px">
-</div>
-        
-
-  <div class="card tag3">
-    <img src="/static/user_sys/images/spreaders.jpeg" class="card-img-top" height="350px" width="1000px">
-    <div class="card-body">
-      <h5 class="card-title">Fertilizer Spreaders</h5>
-      <p class="card-text">
-        Fertilizer spreaders function as the name suggests — they spread fertilizer across a field. While there are fertilizer spreaders that can be run separately, most farming operations require a tractor-run fertilizer spreader for quick, evenly distributed fertilization.
-        There are multiple types of fertilizer spreaders, varying primarily based on the type of fertilizer used. 
-
-
-      </p>
-      <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
-    </div>
-  </div>
-  <div class="card tag3">
-    <div class="card-body">
-        <h5 class="card-title">Harvesters  </h5>
-        <p class="card-text">Grain farmers require combines, also known as harvesters or combine harvesters, that help to harvest their crops efficiently. Even small-scale grain farmers can benefit greatly by using a combine. These massive pieces of machinery use a complex system of gears, blades, belts and wheels to turn cereal crops into grain. Combines accomplish this through three primary processes:
-        <br>
-        <li>
-            Reaping: Reaping is the process of cutting the plant, which is accomplished by the header, reel and cutter bar on the combine. The header gathers the crops while the reel pushes them toward the cutter bar, which cuts the crops at their base.</li>
-        <br><li>
-            Threshing: Threshing is the process of separating the edible parts of the crop from the non-edible parts. This is accomplished by the threshing drum, which beats the cut crops to separate the grains from their stalks.</li>
-        <br><li>
-            Winnowing: Winnowing is the process of separating light chaff from the grain, and it is usually accomplished while the grain is in the threshing drum. Chaff is usually separated from the grain through the use of sieves.</li>
-        <br>
-            There is a huge array of combines and combine attachments to meet the needs of any farm. Many newer combines are even able to track yield data, showing which areas of the field did well and which areas did poorly so that these issues can be addressed the following year.
             </p>
-        <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
+            <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
+        </div>
     </div>
-    <img class="col-sm-6" src="/static/user_sys/images/harvester.jpeg" alt="sans" height="400px" width="550px">
+
+    <div class="card tag3">
+        <div class="card-body">
+            <h5 class="card-title">Seeders</h5>
+            <p class="card-text">Seeders, as the name would suggest, are designed to spread seeds across large plots of land quickly and efficiently. While small farms may use small mechanical seeders or even hand-seeding methods, tractor-pulled seeders are most commonly
+                used in large-scale farms today. There are different machines used in agriculture seeding. </p>
+            <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
+        </div>
+        <img class="col-sm-6" src="/static/user_sys/images/seeders.jpeg" alt="sans" height="300px" width="250px">
+    </div>
+
+
+    <div class="card tag3">
+        <img src="/static/user_sys/images/spreaders.jpeg" class="card-img-top" height="350px" width="1000px">
+        <div class="card-body">
+            <h5 class="card-title">Fertilizer Spreaders</h5>
+            <p class="card-text">
+                Fertilizer spreaders function as the name suggests — they spread fertilizer across a field. While there are fertilizer spreaders that can be run separately, most farming operations require a tractor-run fertilizer spreader for quick, evenly distributed
+                fertilization. There are multiple types of fertilizer spreaders, varying primarily based on the type of fertilizer used.
+
+
+            </p>
+            <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+    <div class="card tag3">
+        <div class="card-body">
+            <h5 class="card-title">Harvesters </h5>
+            <p class="card-text">Grain farmers require combines, also known as harvesters or combine harvesters, that help to harvest their crops efficiently. Even small-scale grain farmers can benefit greatly by using a combine. These massive pieces of machinery use a complex
+                system of gears, blades, belts and wheels to turn cereal crops into grain. Combines accomplish this through three primary processes:
+                <br>
+                <li>
+                    Reaping: Reaping is the process of cutting the plant, which is accomplished by the header, reel and cutter bar on the combine. The header gathers the crops while the reel pushes them toward the cutter bar, which cuts the crops at their base.</li>
+                <br>
+                <li>
+                    Threshing: Threshing is the process of separating the edible parts of the crop from the non-edible parts. This is accomplished by the threshing drum, which beats the cut crops to separate the grains from their stalks.</li>
+                <br>
+                <li>
+                    Winnowing: Winnowing is the process of separating light chaff from the grain, and it is usually accomplished while the grain is in the threshing drum. Chaff is usually separated from the grain through the use of sieves.</li>
+                <br> There is a huge array of combines and combine attachments to meet the needs of any farm. Many newer combines are even able to track yield data, showing which areas of the field did well and which areas did poorly so that these issues
+                can be addressed the following year.
+            </p>
+            <a href="https://www.holtags.com/types-of-farm-equipment-and-their-uses" class="btn btn-primary">Read More</a>
+        </div>
+        <img class="col-sm-6" src="/static/user_sys/images/harvester.jpeg" alt="sans" height="400px" width="550px">
+    </div>
+
+    <div class="card tag3">
+        <img src="/static/user_sys/images/swather.jpeg" class="card-img-top" height="350px" width="1000px">
+        <div class="card-body">
+            <h5 class="card-title">Swather</h5>
+            <p class="card-text">
+                A swather, or windrower, is a farm implement that cuts hay or small grain crops and forms them into a windrow. "Swather" is predominantly the North American term for these machines. In Australia and other parts of the world, they are called "windrowers".
+                They aid harvesting by speeding up the process of drying the crop down to a moisture content suitable for harvesting and storage A swather may be self-propelled via an internal combustion engine, or may be drawn by a tractor and powered
+                through a power take-off shaft. A swather uses a sickle bar (see mower) or cutting discs to cut the stems of the crop. A reel helps the cut crop fall neatly onto a canvas or auger conveyor which moves it and deposits it into a windrow,
+                with all stems oriented in the same direction. Horizontal rollers behind the cutters may be used to crimp the stems of the crop to decrease drying time. The mown strip left behind is the swathe. For hay crops, this is the same basic sequence
+                as is also done in other ways, such as hand scything, cradling, and swathing, mowing with a mower and then raking with a hay rake, or mowing and conditioning with a mower-conditioner (the latter two sometimes also with additional tedding).
+                With grain crops, as combines replaced threshing machines, the swather introduced a new step in the harvesting process to provide for the drying time that binding formerly afforded. Binding allowed subsequent temporary storage of the cut
+                plants before threshing (either in stooks or in a barn), during which time they dried out.
+
+
+
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Swather" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
 </div>
-
-<div class="card tag3">
-    <img src="/static/user_sys/images/swather.jpeg" class="card-img-top" height="350px" width="1000px">
-    <div class="card-body">
-      <h5 class="card-title">Swather</h5>
-      <p class="card-text">
-        A swather, or windrower, is a farm implement that cuts hay or small grain crops and forms them into a windrow. "Swather" is predominantly the North American term for these machines. In Australia and other parts of the world, they are called "windrowers". They aid harvesting by speeding up the process of drying the crop down to a moisture content suitable for harvesting and storage
-A swather may be self-propelled via an internal combustion engine, or may be drawn by a tractor and powered through a power take-off shaft. A swather uses a sickle bar (see mower) or cutting discs to cut the stems of the crop. A reel helps the cut crop fall neatly onto a canvas or auger conveyor which moves it and deposits it into a windrow, with all stems oriented in the same direction. Horizontal rollers behind the cutters may be used to crimp the stems of the crop to decrease drying time. The mown strip left behind is the swathe.
-For hay crops, this is the same basic sequence as is also done in other ways, such as hand scything, cradling, and swathing, mowing with a mower and then raking with a hay rake, or mowing and conditioning with a mower-conditioner (the latter two sometimes also with additional tedding). With grain crops, as combines replaced threshing machines, the swather introduced a new step in the harvesting process to provide for the drying time that binding formerly afforded. Binding allowed subsequent temporary storage of the cut plants before threshing (either in stooks or in a barn), during which time they dried out.
-
-
-
-      </p>
-      <a href="https://en.wikipedia.org/wiki/Swather" class="btn btn-primary">Read More</a>
-    </div>
-  </div>
-
 <style>
-
-
-
-
-
-.card {
-flex-direction: row;
-align-items: center;
-}
-.card-title {
-font-weight: bold;
-}
-.card img {
-width: 30%;
-border-top-right-radius: 0;
-border-bottom-left-radius: calc(0.25rem - 1px);
-}
-@media only screen and (max-width: 768px) {
-a {
-display: none;
-}
-.card-body {
-padding: 0.5em 1.2em;
-}
-.card-body .card-text {
-margin: 0;
-}
-.card img {
-width: 50%;
-}
-}
-@media only screen and (max-width: 1200px) {
-.card img {
-width: 40%;
-}
-}
-
-.tag3{
-padding: 30px;
-}
-
-.tag4{
-background-color: blueviolet;
-color: black;
-}
-
-
-
-
+    .product h2 {
+        text-align: center;
+        padding: 20px 0px;
+        color: #215a32;
+    }
+    
+    .card {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .card-title {
+        font-weight: bold;
+    }
+    
+    .card img {
+        width: 30%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: calc(0.25rem - 1px);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        a {
+            display: none;
+        }
+        .card-body {
+            padding: 0.5em 1.2em;
+        }
+        .card-body .card-text {
+            margin: 0;
+        }
+        .card img {
+            width: 50%;
+        }
+    }
+    
+    @media only screen and (max-width: 1200px) {
+        .card img {
+            width: 40%;
+        }
+    }
+    
+    .tag3 {
+        padding: 30px;
+    }
+    
+    .tag4 {
+        background-color: blueviolet;
+        color: black;
+    }
 </style>
 
 {%endblock body %}
