@@ -25,9 +25,9 @@
                     <form class="requires-validation" method="POST" action="{% url 'farm_ed' %}" novalidate>
                         {% csrf_token %}
                         <div class="col-md-12">
-                            <input class="form-control" type="tel" name="phone" placeholder="Mobile Number" required>
+                            <input class="form-control" type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required>
                             <div class="valid-feedback">Contact is valid!</div>
-                            <div class="invalid-feedback">Contact field cannot be blank!</div>
+                            <div class="invalid-feedback">Mobile Number must be 10 Digits! Contact field cannot be blank!</div>
                         </div>
 
                         <div class="col-md-12">
