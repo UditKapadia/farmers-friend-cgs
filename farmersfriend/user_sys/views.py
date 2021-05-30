@@ -2,6 +2,8 @@ from django.shortcuts import render
 import requests
 from .forms import WeatherForm
 from .models import Weather
+from .models import QueryForm
+
 # Create your views here.
 
 
@@ -74,8 +76,15 @@ def newtech(request):
     return render(request, "user_sys/newtech.html", context)
 
 def queryform(request):
-    context = {}
-    return render(request, "user_sys/queryform.html", context)
+    if request.method == "POST":
+        phone = request.POST.get('phone')
+        email = request.POST.get('email')
+        query = request.POST.get('query')
+        des = request.POST.get('des')
+        queryform = QueryForm(phone=phone, email=email, query=query, des=des)
+        queryform.save()
+    
+    return render(request, "user_sys/queryform.html")
 
 def videobar(request):
     context = {}

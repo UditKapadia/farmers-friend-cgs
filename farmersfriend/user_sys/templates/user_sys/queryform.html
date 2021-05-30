@@ -17,12 +17,11 @@
             <div class="form-content">
                 <div class="form-items">
                     <h3>Query Form</h3>
-                    <p>Write Your Query Below.</p>
-                    <form class="requires-validation" novalidate>
-                        
-                        
+                    <p>Write Your Query Below</p>
+                    <form class="requires-validation" method="POST" action="" novalidate>
+                    {% csrf_token %}    
                         <div class="col-md-12">
-                            <input class="form-control" type="tel" name="des" placeholder="Mobile Number" required>
+                            <input class="form-control" type="tel" name="phone" placeholder="Mobile Number" required>
                         </div>
 
                         <div class="col-md-12">
@@ -47,8 +46,7 @@
                             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                             <label class="form-check-label">I confirm that all data are correct</label>
                             <div class="invalid-feedback">Please confirm that the entered data are all correct!
-                                <!-- https://codepen.io/samnorton/details/oNYajYM
-                                https://freefrontend.com/bootstrap-forms/ -->
+                                
                             </div>
                         </div>
                         

@@ -18,5 +18,6 @@ urlpatterns = [
     path('product/', views.product, name='product'),
     path('team/', views.team, name='team'),
     
+    
 
 ]
