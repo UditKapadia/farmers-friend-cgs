@@ -250,3 +250,70 @@ html {
         opacity: 1;
     }
 }
+
+
+/*******************************/
+
+
+/********* Footer CSS **********/
+
+
+/*******************************/
+
+.footer {
+    position: relative;
+    /* margin-top: 45px; */
+    padding-top: 40px;
+    background: #215a32;
+}
+
+.footer h3 {
+    text-align: center;
+    color: azure;
+}
+
+.footer p {
+    text-align: center;
+    color: rgb(219, 236, 236);
+}
+
+.footer .email {
+    text-align: center;
+    padding-left: 666px;
+    color: azure;
+}
+
+.footer .copyright {
+    padding: 40px 30px;
+}
+
+.footer .copyright .row {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #999999;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #ffffff;
+}
+
+.footer .copyright p a:hover {
+    color: #0796fe;
+}
+
+@media (max-width: 767.98px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
