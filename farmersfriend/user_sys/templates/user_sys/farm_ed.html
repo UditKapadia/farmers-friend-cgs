@@ -1,2 +1,89 @@
-{% extends 'user_sys/base.html' %}{% load static %} {% block title %}Farm Education{% endblock title %} {% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %}
+{% extends 'user_sys/base.html' %}{% load static %} 
+
+{% block title %}Farm Education{% endblock title %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
+{% endblock head %}
+
+{% block body %}
+<div class="container-fluid tag1" style="padding-top : 30px; padding-left: 20px;  ">
+
+
+<div class="row " style="padding-top: 15px; padding-left: 5px; padding-right: 5px;">
+  <div class="col-md-3 tag2" >
+    <div class="card" style="width: 18rem; ">
+      <img class="card-img-top" src="/static/user_sys/images/NewTech.jpeg" alt="Card image cap" height="190px" width="875px">
+      <div class="card-body">
+        <h5 class="card-title tag" >Advance Technology</h5>
+        <p class="card-text tag" >Show New Technology</p>
+        <a href="/newtech" class="btn btn-success">Click Here!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 tag2">
+    <div class="card" style="width: 18rem; ">
+      <img class="card-img-top" src="/static/user_sys/images/Irrigation.jpeg" alt="Card image cap" height="190px" width="875px">
+      <div class="card-body">
+        <h5 class="card-title tag" >Irrigation</h5>
+        <p class="card-text tag" >Description baki</p>
+        <a href="/irrigation" class="btn btn-success">Click Here!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 tag2">
+    <div class="card" style="width: 18rem; ">
+      <img class="card-img-top" src="/static/user_sys/images/QueryForm.jpeg" alt="Card image cap" height="190px" width="875px">
+      <div class="card-body">
+        <h5 class="card-title tag" >Query Form</h5>
+        <p class="card-text tag" >Description baki</p>
+        <a href="/queryform" class="btn btn-success">Click Here!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 tag2">
+    <div class="card" style="width: 18rem; ">
+      <img class="card-img-top" src="/static/user_sys/images/VideoBar.jpeg" alt="Card image cap" height="190px" width="875px">
+      <div class="card-body">
+        <h5 class="card-title tag" >Video Bar</h5>
+        <p class="card-text tag" >Description baki</p>
+        <a href="/videobar" class="btn btn-success ">Click Here!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 tag2" style="padding-top: 30px;">
+    <div class="card" style="width: 18rem; ">
+      <img class="card-img-top" src="/static/user_sys/images/Product.jpeg" alt="Card image cap" height="190px" width="875px">
+      <div class="card-body">
+        <h5 class="card-title tag" >Product & Equipments</h5>
+        <p class="card-text tag" >Description baki</p>
+        <a href="/product" class="btn btn-success">Click Here!</a>
+      </div>
+    </div>
+  </div>
+<style>
+
+  .tag1{
+    background-color: #9fcab1f2;
+  }
+  .tag{
+    color:black
+  }
+
+  .tag2{
+    padding-right: 5px; 
+
+  }
+  
+
+
+</style>
+</div>
+
+
+</div>
+{% endblock body %}

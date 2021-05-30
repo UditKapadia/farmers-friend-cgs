@@ -11,4 +11,11 @@ urlpatterns = [
     path('video-gallery/', views.video_gallery, name='video_gallery'),
     path('login/', views.login, name='login'),
     path('register/', views.register, name='register'),
+    path('newtech/', views.newtech, name='newtech'),
+    path('irrigation/', views.irrigation, name='irrigation'),
+    path('queryform/', views.queryform, name='queryform'),
+    path('videobar/', views.videobar, name='videobar'),
+    path('product/', views.product, name='product'),
+    
+
 ]

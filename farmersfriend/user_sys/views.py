@@ -64,3 +64,23 @@ def login(request):
 def register(request):
     context = {}
     return render(request, "user_sys/register.html", context)
+
+def irrigation(request):
+    context = {}
+    return render(request, "user_sys/irrigation.html", context)
+
+def newtech(request):
+    context = {}
+    return render(request, "user_sys/newtech.html", context)
+
+def queryform(request):
+    context = {}
+    return render(request, "user_sys/queryform.html", context)
+
+def videobar(request):
+    context = {}
+    return render(request, "user_sys/videobar.html", context)
+
+def product(request):
+    context = {}
+    return render(request, "user_sys/product.html", context)

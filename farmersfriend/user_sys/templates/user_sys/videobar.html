@@ -1,0 +1,86 @@
+
+{% extends 'user_sys/base.html' %}{% load static %} 
+
+{% block title %}Video | Farm Education{% endblock title %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
+{% endblock head %}
+
+{%block body %}
+<div class="container-fluid pb-video-container">
+    <div class="col-md-10 offset-md-1">
+        <h2 class="text-xs-center" style="font-family:Trebuchet MS">Video Gallery</h2>
+        <div class="row pb-row">
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/F3HpRuUW2A8" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss">Sprinkler Irrigation System</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/O5alY311d1A" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss">Modern, Efficient Irrigation Systems Save Money For Farmers</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame " width="100%" height="230" src="https://www.youtube.com/embed/qXdw-hBiu1A" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss">Greenhouse Tomatoes Farming</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/eAY4OdcekWA" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss" >Asian Dragon fruit Farming and Harvest</label>
+            </div>
+        </div>
+        <div class="row pb-row">
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/3j3p9V0PFyA" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss" >Understanding Pesticides </label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/3lY3XK_Z6UQ" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss">7 amazing agriculture technologies</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/AJ44k_YQJeM" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss">Organic Farming</label>
+            </div>
+            <div class="col-md-3 pb-video">
+                <iframe class="pb-video-frame" width="100%" height="230" src="https://www.youtube.com/embed/WmQT6zaCH-Q" frameborder="0" allowfullscreen></iframe>
+                <label class="form-control label-warning text-xs-center vcss">Vegetable Farming in Net House</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .pb-video-container {
+        padding-top: 20px;
+        background: azure;
+        font-family: Lato;
+    }
+
+    .pb-video {
+        border: 1px solid #bec9e6;
+        padding: 5px;
+    }
+
+        .pb-video:hover {
+            background: #bad3cd;
+        }
+    
+    .vcss{
+        background-color: rgba(1, 1, 15, 0.774); 
+        color: white; 
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .pb-video-frame {
+        transition: width 2s, height 2s;
+    }
+
+        .pb-video-frame:hover {
+            height: 300px;
+        }
+
+    .pb-row {
+        margin-bottom: 10px;
+    }
+</style>
+{%endblock body %}
