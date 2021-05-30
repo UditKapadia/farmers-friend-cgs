@@ -97,3 +97,7 @@ def product(request):
 def team(request):
     context = {}
     return render(request, "user_sys/team.html", context)
+
+def contact(request):
+    context = {}
+    return render(request, "user_sys/contact.html", context)
