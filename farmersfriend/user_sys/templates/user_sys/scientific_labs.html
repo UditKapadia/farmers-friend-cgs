@@ -1,2 +1,48 @@
-{% extends 'user_sys/base.html' %} {% load static %} {% block title %}Scientific Laboratories{% endblock title %} {% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %}
+{% extends 'user_sys/base.html' %} 
+{% load static %} 
+{% block title %}Scientific Laboratories{% endblock title %} 
+{% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
+{% endblock head %}
+{% block body %}
+<div class="container" style="width:30%; padding:30px">
+<form >
+  <div class="form-group" >
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1"></label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Soil Type</label>
+  <select class="form-control">
+  <option>Choose Your Soil Type</option>
+  <option>Black Soil</option>
+  <option>Red/Yellow Soil</option>
+  <option>Aluvial Soil</option>
+  <option>Laterite Soil</option>
+  <option>Arid Soil</option>
+  <option>Saline Soil</option>
+  <option>Peaty Soil</option>
+  <option>Forest Soil</option>
+  <option>I don't know</option>
+</select>
+</div>
+<div class="form-group">
+    <label for="exampleInputPassword1">Category of Last Sown Crop</label>
+  <select class="form-control">
+  <option>Kharif</option>
+  <option>Rabi</option>
+  <option>Zaid</option>
+  </select>
+</div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock body %}
