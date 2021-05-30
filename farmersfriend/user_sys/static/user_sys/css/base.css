@@ -519,7 +519,7 @@ About US CSS
 .contact .contact-text h3 {
     font-size: 16px;
     font-weight: 400;
-    color: #092a49;
+    color: #215a32;
     letter-spacing: 1px;
 }
 
@@ -561,16 +561,16 @@ About US CSS
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #092a49;
+    color: #215a32;
     background: none;
-    border: 2px solid #092a49;
+    border: 2px solid #215a32;
     border-radius: 0;
     transition: .3s;
 }
 
 .contact .contact-form .btn:hover {
-    color: #0796fe;
-    background: #092a49;
+    color: white;
+    background: #215a32;
 }
 
 .contact .help-block ul {
