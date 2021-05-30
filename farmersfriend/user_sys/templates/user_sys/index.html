@@ -74,7 +74,7 @@
         </div>
     </div>
 
-   
+
 
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
@@ -82,6 +82,28 @@
     <div class="swiper-button-next"></div>
 </div>
 
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        speed: 1000,
+        direction: 'horizontal',
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            delay: 5000,
+        },
+    });
+</script>
 
 
 
