@@ -84,3 +84,7 @@ def videobar(request):
 def product(request):
     context = {}
     return render(request, "user_sys/product.html", context)
+
+def team(request):
+    context = {}
+    return render(request, "user_sys/team.html", context)

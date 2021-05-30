@@ -1,9 +1,11 @@
 {% extends 'user_sys/base.html' %}{% load static %} {% block title %}Farm Education{% endblock title %} {% block head %}
 <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {% block body %}
-<div class="container-fluid tag1" style="padding-top : 30px; padding-left: 20px;  ">
 
 
-    <div class="row " style="padding-top: 15px; padding-left: 5px; padding-right: 5px;">
+<div class="container-fluid tag1" style="padding-top : 30px; ">
+
+
+    <div class="row">
         <div class="col-md-3 tag2">
             <div class="card" style="width: 18rem; ">
                 <img class="card-img-top" src="/static/user_sys/images/NewTech.jpeg" alt="Card image cap" height="190px" width="875px">
@@ -37,7 +39,7 @@
             </div>
         </div>
 
-        <div class="col-md-3 tag2">
+        <!-- <div class="col-md-4  tag2">
             <div class="card" style="width: 18rem; ">
                 <img class="card-img-top" src="/static/user_sys/images/VideoBar.jpeg" alt="Card image cap" height="190px" width="875px">
                 <div class="card-body">
@@ -46,9 +48,9 @@
                     <a href="/videobar" class="btn btn-success ">Click Here!</a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="col-md-3 tag2" style="padding-top: 30px;">
+        <div class="col-md-3  tag2">
             <div class="card" style="width: 18rem; ">
                 <img class="card-img-top" src="/static/user_sys/images/Product.jpeg" alt="Card image cap" height="190px" width="875px">
                 <div class="card-body">
@@ -68,8 +70,9 @@
             }
             
             .tag2 {
-                padding-right: 5px;
-                margin-bottom: 45px;
+                justify-content: space-evenly;
+                margin-bottom: 150px;
+                margin-top: 100px;
             }
         </style>
     </div>

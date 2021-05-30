@@ -373,3 +373,89 @@ About US CSS
     font-size: 20px;
     margin: 0;
 }
+
+
+/*******************************/
+
+
+/*********** Team CSS **********/
+
+
+/*******************************/
+
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.team .team-item {
+    position: relative;
+    margin-bottom: 75px;
+}
+
+.team .team-img {
+    position: relative;
+}
+
+.team .team-img img {
+    width: 100%;
+}
+
+.team .team-text {
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 96px;
+    bottom: -46px;
+    left: 15px;
+    padding: 25px 15px;
+    text-align: center;
+    background: rgba(256, 256, 256, .9);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    transition: .3s;
+    overflow: hidden;
+}
+
+.team .team-text h2 {
+    color: #0796fe;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.team .team-text p {
+    margin-bottom: 20px;
+    color: #092a49;
+}
+
+.team .team-social {
+    position: relative;
+    font-size: 0;
+}
+
+.team .team-social a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 0 3px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #092a49;
+    border: 2px solid #092a49;
+    transition: .3s;
+}
+
+.team .team-social a:hover {
+    color: #0796fe;
+    border-color: #0796fe;
+}
+
+.team .team-item:hover .team-text {
+    height: 250px;
+}
+
+.team .section-header {
+    margin-top: 40px;
+}

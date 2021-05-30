@@ -16,6 +16,7 @@ urlpatterns = [
     path('queryform/', views.queryform, name='queryform'),
     path('videobar/', views.videobar, name='videobar'),
     path('product/', views.product, name='product'),
+    path('team/', views.team, name='team'),
     
 
 ]
