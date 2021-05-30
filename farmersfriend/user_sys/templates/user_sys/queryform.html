@@ -22,7 +22,7 @@
                 <div class="form-items">
                     <h3>Query Form</h3>
                     <p>Write Your Query Below</p>
-                    <form class="requires-validation" method="POST" action="{% url 'farm_ed' %}" novalidate>
+                    <form class="requires-validation" method="POST" action="" novalidate>
                         {% csrf_token %}
                         <div class="col-md-12">
                             <input class="form-control" type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10}" required>
