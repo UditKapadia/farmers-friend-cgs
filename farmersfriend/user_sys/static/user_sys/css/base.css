@@ -317,3 +317,59 @@ html {
         text-align: center;
     }
 }
+
+
+/* -----------
+
+About US CSS 
+
+-------------- */
+
+.about {
+    color: #092a49;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.about h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about .col-12 {
+    text-align: center;
+}
+
+.counters .col-3 {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.counters i {
+    padding: 5px 15px 0 0;
+    font-size: 28px;
+    color: #0796fe;
+}
+
+.counters h2 {
+    position: relative;
+    display: inline-block;
+    color: #0796fe;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.counters h2::after {
+    position: absolute;
+    content: "+";
+    top: -15px;
+    right: -15px;
+}
+
+.counters p {
+    color: #092a49;
+    font-size: 20px;
+    margin: 0;
+}
