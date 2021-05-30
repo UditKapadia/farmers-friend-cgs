@@ -3,6 +3,7 @@ import requests
 from .forms import WeatherForm
 from .models import Weather
 from .models import QueryForm
+from django.contrib import messages
 
 # Create your views here.
 
@@ -83,6 +84,7 @@ def queryform(request):
         des = request.POST.get('des')
         queryform = QueryForm(phone=phone, email=email, query=query, des=des)
         queryform.save()
+        messages.success(request, 'Your form has submitted successfully!')
     
     return render(request, "user_sys/queryform.html")
 
@@ -97,3 +99,7 @@ def product(request):
 def team(request):
     context = {}
     return render(request, "user_sys/team.html", context)
+
+def contact(request):
+    context = {}
+    return render(request, "user_sys/contact.html", context)

@@ -460,3 +460,121 @@ About US CSS
 .team .section-header {
     margin-top: 40px;
 }
+
+
+/*******************************/
+
+
+/********* Contact Us CSS **********/
+
+
+/*******************************/
+
+.contactus {
+    padding: 100px;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    padding: 20px 0 100px 0;
+}
+
+.contact .contact-info {
+    position: relative;
+    display: flex;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+    transition: .3s;
+}
+
+.contact .contact-info:hover {
+    border-color: transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.contact .contact-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.contact .contact-icon i {
+    font-size: 18px;
+    color: #0796fe;
+}
+
+.contact .contact-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.contact .contact-text h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #215a32;
+    letter-spacing: 1px;
+}
+
+.contact .contact-text p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.contact .contact-form {
+    position: relative;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+    transition: .3s;
+}
+
+.contact .contact-form:hover {
+    border-color: transparent;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.contact .contact-form input {
+    padding: 15px;
+    background: none;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.contact .contact-form textarea {
+    height: 100px;
+    padding: 8px 15px;
+    background: none;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
+.contact .contact-form .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #215a32;
+    background: none;
+    border: 2px solid #215a32;
+    border-radius: 0;
+    transition: .3s;
+}
+
+.contact .contact-form .btn:hover {
+    color: white;
+    background: #215a32;
+}
+
+.contact .help-block ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}

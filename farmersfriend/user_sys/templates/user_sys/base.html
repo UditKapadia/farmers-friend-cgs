@@ -90,7 +90,7 @@
                     <a class="nav-link a" href="{% url 'video_gallery' %}">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link a" href="#">Contact</a>
+                    <a class="nav-link a" href="{% url 'contact' %}">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link a" href="{% url 'team' %}">Team</a>
@@ -103,6 +103,18 @@
         </div>
     </nav>
 
+{% comment %} {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    {% endfor %}
+
+{% endif %} {% endcomment %}
 
 
     {% block body %}{% endblock body %}
