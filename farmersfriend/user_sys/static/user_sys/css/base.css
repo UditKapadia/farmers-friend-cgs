@@ -399,7 +399,12 @@ About US CSS
 }
 
 .team .team-img img {
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 250px;
+    height: 300px;
+>>>>>>> 5a0f142c104f814052b61c83c14eafadca409dd0
 }
 
 .team .team-text {
