@@ -1,5 +1,5 @@
 from django.db import models
-
+import datetime
 # Create your models here.
 
 
@@ -17,11 +17,12 @@ class QueryForm(models.Model):
     des = models.TextField()
 
     def __str__(self):
-        return self.query
+        return self.email
 
 
 class LaboratoryBooking(models.Model):
-    mobileNumber = models.CharField(max_length=30)
+    dateTime = models.DateTimeField(null=True)
+    mobileNumber = models.CharField(max_length=30, default="1234567890")
     email = models.CharField(max_length=30)
     addressField = models.TextField()
     cityField = models.CharField(max_length=30)
@@ -29,3 +30,6 @@ class LaboratoryBooking(models.Model):
     lastCropSown = models.CharField(max_length=30)
     soilType = models.CharField(max_length=30)
     cropType = models.CharField(max_length=30)
+
+    def __str__(self) -> str:
+        return self.email
