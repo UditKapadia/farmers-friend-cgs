@@ -1,8 +1,7 @@
 from django.shortcuts import render
 import requests
 from .forms import WeatherForm
-from .models import Weather
-from .models import QueryForm
+from .models import *
 from django.contrib import messages
 
 # Create your views here.
@@ -16,6 +15,22 @@ def index(request):
 def scientific_labs(request):
     context = {}
     return render(request, "user_sys/scientific_labs.html", context)
+
+
+def laboratory_booking(request):
+    if request.method == "POST":
+        mobile_num = request.POST.get("mobileNumber")
+        email = request.POST.get("email")
+        address = request.POST.get("addressField")
+        city = request.POST.get("cityField")
+        state = request.POST.get("stateField")
+        lastCropSown = request.POST.get("lastCropSown")
+        soilType = request.POST.get("soilType")
+        cropType = request.POST.get("cropType")
+        lab_booking_save = LaboratoryBooking(
+            mobileNumber=mobile_num, email=email, addressField=address, cityField=city, stateField=state, lastCropSown=lastCropSown, soilType=soilType, cropType=cropType)
+        lab_booking_save.save()
+    return render(request, "user_sys/laboratoryBookingForm.html")
 
 
 def market(request):

@@ -11,7 +11,7 @@ class Weather(models.Model):
 
 
 class QueryForm(models.Model):
-    phone = models.CharField(max_length=10)
+    phone = models.IntegerField()
     email = models.CharField(max_length=30)
     query = models.CharField(max_length=30)
     des = models.TextField()
@@ -21,4 +21,11 @@ class QueryForm(models.Model):
 
 
 class LaboratoryBooking(models.Model):
-    pass
+    mobileNumber = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    addressField = models.TextField()
+    cityField = models.CharField(max_length=30)
+    stateField = models.CharField(max_length=30)
+    lastCropSown = models.CharField(max_length=30)
+    soilType = models.CharField(max_length=30)
+    cropType = models.CharField(max_length=30)
