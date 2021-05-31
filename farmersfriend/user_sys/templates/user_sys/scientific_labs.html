@@ -1,38 +1,33 @@
-{% extends 'user_sys/base.html' %} 
-{% load static %} 
-{% block title %}Scientific Laboratories{% endblock title %} 
-{% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> 
-{% endblock head %}
-{% block body %}
+{% extends 'user_sys/base.html' %} {% load static %} {% block title %}Scientific Laboratories{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {% block body %}
 <div class="container p-4" style="margin-left:25%">
 
-<form class="p-3" style="border: 5px solid; width:70%;">
-<h1 align=center>Laboratory Test Booking</h1>
-<hr>
-<div class="form-group" >
-    <label for="inputMobileNumber"><strong>Mobile Number</strong></label>
-    <input type="tel" class="form-control" id="inputMobileNumber" aria-describedby="MobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}">
-  </div>
+    <form class="p-3" style="border: 5px solid; width:70%;">
+        <h1 text-align=center>Laboratory Test Booking</h1>
+        <hr>
+        <div class="form-group">
+            <label for="inputMobileNumber"><strong>Mobile Number</strong></label>
+            <input type="tel" class="form-control" id="inputMobileNumber" aria-describedby="MobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}">
+        </div>
 
 
-  <div class="form-group" >
-    <label for="exampleInputEmail1"><strong>Email address</strong></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" >
-  </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><strong>Email address</strong></label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
 
 
 
-  <div class="form-group">
-    <label for="addressField"><strong>Address</strong></label>
-    <input type="text" class="form-control" id="addressField" placeholder="Address">
-  </div>
+        <div class="form-group">
+            <label for="addressField"><strong>Address</strong></label>
+            <input type="text" class="form-control" id="addressField" placeholder="Address">
+        </div>
 
-<div class="row">
-<div class="col">
-  <div class="form-group">
-    <label for="addressField"><strong>City</strong></label>
-    <select type="text" class="form-control" id="cityField">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="addressField"><strong>City</strong></label>
+                    <select type="text" class="form-control" id="cityField">
     <option>Choose Your City</option>
     <option>Ahmedabad</option>
     <option>Anand</option>
@@ -64,13 +59,13 @@
     <option>Valsad</option>
     <option>Vapi</option>
     </select>
-    </div>
-    </div>
-    
-    <div class="col">
-    <div class="form-group">
-    <label for="addressField"><strong>State</strong></label>
-    <select type="text" class="form-control" id="stateField">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label for="addressField"><strong>State</strong></label>
+                    <select type="text" class="form-control" id="stateField">
     <option>Choose Your State</option>
     <option>Gujarat</option>
     <option>Rajasthan</option>
@@ -82,21 +77,21 @@
     <option>Bihar</option>
     <option>Himachal Pradesh</option>
     </select>
-  </div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
 
 
-<div class="form-group" >
-    <label for="exampleInputEmail1"><strong>Last Crop Sown</strong></label>
-    <input type="text" class="form-control" id="lastCropSown" aria-describedby="emailHelp" placeholder="Which was the last crop that you undertook?" >
-  </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1"><strong>Last Crop Sown</strong></label>
+            <input type="text" class="form-control" id="lastCropSown" aria-describedby="emailHelp" placeholder="Which was the last crop that you undertook?">
+        </div>
 
-<div class="row">
-<div class="col">
-  <div class="form-group">
-    <label for="exampleInputPassword1"><strong>Soil Type</strong></label>
-  <select class="form-control">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><strong>Soil Type</strong></label>
+                    <select class="form-control">
   <option>Choose Your Soil Type</option>
   <option>Black Soil</option>
   <option>Red/Yellow Soil</option>
@@ -108,28 +103,28 @@
   <option>Forest Soil</option>
   <option>I don't know</option>
 </select>
-</div>
-</div>
+                </div>
+            </div>
 
-<div class="col">
-<div class="form-group">
-    <label for="exampleInputPassword1"><strong>Category of Last Sown Crop</strong></label>
-  <select class="form-control">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleInputPassword1"><strong>Category of Last Sown Crop</strong></label>
+                    <select class="form-control">
   <option>Select the Category</option>
   <option>Kharif</option>
   <option>Rabi</option>
   <option>Zaid</option>
   </select>
-</div>
-</div>
-</div>
+                </div>
+            </div>
+        </div>
 
 
-  <div class="form-check p-3">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">I understand and agree to all the Terms and Conditions of this test. <a href="">Click here to know more</a> </label>
-  </div>
-  <button type="submit" class="btn btn-success text-white" >Submit</button>
-</form>
+        <div class="form-check p-3">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">I understand and agree to all the Terms and Conditions of this test. <a href="">Click here to know more</a> </label>
+        </div>
+        <button type="submit" class="btn btn-success text-white">Submit</button>
+    </form>
 </div>
 {% endblock body %}
