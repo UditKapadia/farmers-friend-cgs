@@ -55,6 +55,13 @@ def weather_forecast(request):
         'city': city,
         'temperature': r['main']['temp'],
         'description': r['weather'][0]['description'],
+        'humidity': r['main']['humidity'],
+        'feels_like': r['main']['feels_like'],
+        'temperature_min': r['main']['temp_min'],
+        'temperature_max': r['main']['temp_max'],
+        'pressure': r['main']['pressure'],
+        'wind_speed': r['wind']['speed'],
+        'visibility': r['visibility']
     }
     # print(city_weather)
     context = {
