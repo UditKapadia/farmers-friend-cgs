@@ -2,8 +2,83 @@
 <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} 
 {% block body %}
 
-<div class="container">
-
-<h1><a href="{% url 'labBookingForm' %}" class="formLink">Click Here To Go to the Form!!</a></h1>
+<div class="container-fluid tag1" style="padding-top : 30px; ">
+    <div class="container">
+    <h2 class="m-0">Laboratory Services</h2>
 </div>
+    <div class="row">
+        <div class="col-md-3 tag2">
+            <div class="card" style="width: 18rem; ">
+                <img class="card-img-top" src="/static/user_sys/images/lab.jpg" alt="Card image cap" height="190px" width="875px">
+                <div class="card-body">
+                    <h5 class="card-title tag">Laboratory Test Booking</h5>
+                    <p class="card-text tag">Description baki</p>
+                    <a href="{% url 'labBookingForm' %}" class="btn btn-success">Click Here!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 tag2">
+            <div class="card" style="width: 18rem; ">
+                <img class="card-img-top" src="/static/user_sys/images/FAQ.jpeg" alt="Card image cap" height="190px" width="875px">
+                <div class="card-body">
+                    <h5 class="card-title tag">FAQ</h5>
+                    <p class="card-text tag">Description baki</p>
+                    <a href="" class="btn btn-success">Click Here!</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3  tag2">
+            <div class="card" style="width: 18rem; ">
+                <img class="card-img-top" src="/static/user_sys/images/result1.jpg" alt="Card image cap" height="190px" width="875px">
+                <div class="card-body">
+                    <h5 class="card-title tag">Test Results</h5>
+                    <p class="card-text tag">Description baki</p>
+                    <a href="" class="btn btn-success">Click Here!</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3  tag2">
+            <div class="card" style="width: 18rem; ">
+                <img class="card-img-top" src="/static/user_sys/images/result1.jpg" alt="Card image cap" height="190px" width="875px">
+                <div class="card-body">
+                    <h5 class="card-title tag">Previous Records</h5>
+                    <p class="card-text tag">Description baki</p>
+                    <a href="" class="btn btn-success">Click Here!</a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            h2 {
+                    text-align: center;
+                    color: #063a14;
+                    padding-top: 15px;
+                }
+
+            .tag1 {
+                background-color: #9fcab1f2;
+            }
+            
+            .tag {
+                color: black
+            }
+            
+            .tag2 {
+                justify-content: space-evenly;
+                margin-bottom: 150px;
+                margin-top: 100px;
+            }
+        </style>
+    </div>
+
+
+</div>
+
+
+
+
 {% endblock body %}
