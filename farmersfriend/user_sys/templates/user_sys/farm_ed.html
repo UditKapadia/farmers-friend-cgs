@@ -1,29 +1,18 @@
 {% extends 'user_sys/base.html' %}{% load static %} {% block title %}Farm Education{% endblock title %} {% block head %}
 <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {% block body %}
 
-{% if messages %}
-    {% for message in messages %}
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>{{ message }}</strong>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    
-    {% endfor %}
-
-{% endif %}
 
 
 <div class="container-fluid tag1" style="padding-top : 30px; ">
- 
-
+    <div class="container">
+    <h2 class="m-0">Farm-Ed Services</h2>
+</div>
     <div class="row">
         <div class="col-md-3 tag2">
             <div class="card" style="width: 18rem; ">
                 <img class="card-img-top" src="/static/user_sys/images/NewTech.jpeg" alt="Card image cap" height="190px" width="875px">
                 <div class="card-body">
-                    <h5 class="card-title tag">Advance Technology</h5>
+                    <h5 class="card-title tag">Advanced Technology</h5>
                     <p class="card-text tag">Show New Technology</p>
                     <a href="/newtech" class="btn btn-success">Click Here!</a>
                 </div>
@@ -74,6 +63,12 @@
             </div>
         </div>
         <style>
+            h2 {
+                    text-align: center;
+                    color: #063a14;
+                    padding-top: 15px;
+                }
+
             .tag1 {
                 background-color: #9fcab1f2;
             }
