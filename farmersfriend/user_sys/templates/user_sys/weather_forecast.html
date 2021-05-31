@@ -1,13 +1,95 @@
 {% extends 'user_sys/base.html' %} {% load static %} {% block title %}Weather Forecast{% endblock title %} {% block head %}
-<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %} {% block body %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/3.6.95/css/materialdesignicons.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">{% endblock head %} {% block body %}
 
 <div class="weather">
-    <form action="" method="POST">{% csrf_token %}
+    <!-- <form action="" method="POST">{% csrf_token %}
         <input type="text" name="cityName" id="">
         <input type="submit" value="show">
-    </form>
-    <p>City: {{city_weather.city}}</p>
+    </form> -->
+    <!-- <p>City: {{city_weather.city}}</p>
     <p>Temperature: {{city_weather.temperature}} Cel</p>
-    <p>Description: {{city_weather.description}}</p>
+    <p>Description: {{city_weather.description}}</p> -->
+    <!-- <p>Description: {{city_weather.temperature_min}}</p>
+    <p>Description: {{city_weather.temperature_max}}</p>
+    <p>Description: {{city_weather.feels_like}}</p>
+    <p>Description: {{city_weather.humidity}}</p>
+    <p>Description: {{city_weather.pressure}}</p>
+    <p>Description: {{city_weather.wind_speed}}</p>
+    <p>Description: {{city_weather.visibility}}</p> -->
+    <h2>Live Weather update</h2>
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-lg-8 grid-margin stretch-card">
+                    <!--weather card-->
+                    <form class="form" action="" method="POST">{% csrf_token %}
+                        <input type="text" name="cityName" id="" placeholder="Search City here" class="city">
+                        <input type="submit" value="show" class="show">
+                    </form>
+                    <div class="card card-weather">
+                        <div class="card-body">
+                            <div class="weather-date-location">
+                                <h3>
+
+                                    <script>
+                                        document.write(new Date().toDateString());
+                                    </script>
+
+                                </h3>
+                                <p class="text-gray"> <span class="weather-location">{{city_weather.city}}</span> </p>
+                            </div>
+                            <div class="weather-data d-flex">
+                                <div class="mr-auto">
+                                    <h4 class="display-3">{{city_weather.temperature}} <span class="symbol">°</span>C</h4>
+                                    <p>{{city_weather.description}} </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="d-flex weakly-weather">
+                                <div class="weakly-weather-item">
+                                    <p class="mb-1"> Temperature Feels Like</p>
+                                    <p class="mb-0"> {{city_weather.feels_like}} </p>
+                                </div>
+                                <div class="weakly-weather-item">
+                                    <p class="mb-1"> Temperature Min</p>
+                                    <p class="mb-0"> {{city_weather.temperature_min}} <span class="symbol">°</span>C</h4>
+                                    </p>
+                                </div>
+                                <div class="weakly-weather-item">
+                                    <p class="mb-1"> Temperature Max </p>
+                                    <p class="mb-0">{{city_weather.temperature_max}} <span class="symbol">°</span>C</h4>
+                                    </p>
+                                </div>
+                                <div class="weakly-weather-item">
+                                    <p class="mb-0"> Humidity </p> <i class="fas fa-tint"></i>
+                                    <p class="mb-0"> {{city_weather.humidity}} % </p>
+                                </div>
+
+                                <div class="weakly-weather-item">
+                                    <p class="mb-1"> Pressure</p> <i class="mdi mdi-weather-pouring"></i>
+                                    <p class="mb-0">{{city_weather.pressure}} hPa</p>
+                                </div>
+                                <div class="weakly-weather-item">
+                                    <p class="mb-1">WindSpeed</p> <i class="fas fa-wind"></i>
+                                    <p class="mb-0">{{city_weather.wind_speed}} km/h</p>
+                                </div>
+                                <div class="weakly-weather-item">
+                                    <p class="mb-1"> Visibility</p> <i class="fas fa-eye"></i>
+                                    <p class="mb-0"> {{city_weather.visibility}} meter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--weather card ends-->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 {% endblock body %}
