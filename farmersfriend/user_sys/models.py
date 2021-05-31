@@ -11,10 +11,14 @@ class Weather(models.Model):
 
 
 class QueryForm(models.Model):
-    phone = models.CharField(max_length=5)
+    phone = models.CharField(max_length=10)
     email = models.CharField(max_length=30)
     query = models.CharField(max_length=30)
     des = models.TextField()
 
     def __str__(self):
         return self.query
+
+
+class LaboratoryBooking(models.Model):
+    pass
