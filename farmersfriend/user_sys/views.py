@@ -1,9 +1,9 @@
 from django.shortcuts import render
 import requests
-from .forms import WeatherForm
+from .forms import *
 from .models import *
 from django.contrib import messages
-
+import datetime
 # Create your views here.
 
 
@@ -19,6 +19,7 @@ def scientific_labs(request):
 
 def laboratory_booking(request):
     if request.method == "POST":
+        dateTime = datetime.datetime.today()
         mobile_num = request.POST.get("mobileNumber")
         email = request.POST.get("email")
         address = request.POST.get("addressField")
@@ -28,8 +29,9 @@ def laboratory_booking(request):
         soilType = request.POST.get("soilType")
         cropType = request.POST.get("cropType")
         lab_booking_save = LaboratoryBooking(
-            mobileNumber=mobile_num, email=email, addressField=address, cityField=city, stateField=state, lastCropSown=lastCropSown, soilType=soilType, cropType=cropType)
+            dateTime=dateTime, mobileNumber=mobile_num, email=email, addressField=address, cityField=city, stateField=state, lastCropSown=lastCropSown, soilType=soilType, cropType=cropType)
         lab_booking_save.save()
+
     return render(request, "user_sys/laboratoryBookingForm.html")
 
 

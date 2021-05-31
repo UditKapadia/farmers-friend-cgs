@@ -9,29 +9,33 @@
         <hr>
         <div class="form-group">
             <label for="mobileNumber"><strong>Mobile Number</strong></label>
-            <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}">
+            <input type="tel" class="form-control" name="mobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required>
+            <div class="valid-feedback">Contact is valid!</div>
+            <div class="invalid-feedback">Mobile Number must be 10 Digits! Contact field cannot be blank!</div>
         </div>
 
 
         <div class="form-group">
             <label for="email"><strong>Email address</strong></label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
+            <input type="email" class="form-control" name="email" placeholder="Enter email" required>
         </div>
 
 
 
         <div class="form-group">
             <label for="addressField"><strong>Address</strong></label>
-            <input type="text" class="form-control" id="addressField" placeholder="Address">
+            <input type="text" class="form-control" name="addressField" placeholder="Address" required>
+            <div class="valid-feedback">Description field is valid!</div>
+            <div class="invalid-feedback">Description field cannot be blank!</div>
         </div>
 
         <div class="row">
             <div class="col">
                 <div class="form-group">
                     <label for="cityField"><strong>City</strong></label>
-                    <select type="text" class="form-control" id="cityField">
-                      <option>Choose Your City</option>
-                      <option>Ahmedabad</option>
+                    <select type="text" class="form-control" name="cityField" required>
+                      <option disabled selected>Choose Your City</option>
+                      <option value=first>Ahmedabad</option>
                       <option>Anand</option>
                       <option>Amreli</option>
                       <option>Banaskantha</option>
@@ -67,7 +71,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="stateField"><strong>State</strong></label>
-                    <select type="text" class="form-control" id="stateField">
+                    <select type="text" class="form-control" name="stateField" required>
                     <option>Choose Your State</option>
                     <option>Gujarat</option>
                     <option>Rajasthan</option>
@@ -86,14 +90,14 @@
 
         <div class="form-group">
             <label for="lastCropSown"><strong>Last Crop Sown</strong></label>
-            <input type="text" class="form-control" id="lastCropSown" placeholder="Which was the last crop that you undertook?">
+            <input type="text" class="form-control" name="lastCropSown" placeholder="Which was the last crop that you undertook?" required>
         </div>
 
         <div class="row">
             <div class="col">
                 <div class="form-group">
                     <label for="soilType"><strong>Soil Type</strong></label>
-                    <select class="form-control" id="soilType">
+                    <select class="form-control" name="soilType" required>
                     <option>Choose Your Soil Type</option>
                     <option>Black Soil</option>
                     <option>Red/Yellow Soil</option>
@@ -111,7 +115,7 @@
             <div class="col">
                 <div class="form-group">
                     <label for="cropType"><strong>Category of Last Sown Crop</strong></label>
-                    <select class="form-control" id="cropType">
+                    <select class="form-control" name="cropType" required>
                     <option>Select the Category</option>
                     <option>Kharif</option>
                     <option>Rabi</option>
@@ -123,8 +127,9 @@
 
 
         <div class="form-check p-3">
-            <input type="checkbox" class="form-check-input" id="checkBox">
+            <input type="checkbox" class="form-check-input" id="checkBox" required>
             <label class="form-check-label" for="checkBox">I understand and agree to all the Terms and Conditions of this test. <a href="">Click here to know more</a> </label>
+                        
         </div>
         <button type="submit" class="btn btn-success text-white">Submit</button>
     </form>
