@@ -19,6 +19,7 @@ urlpatterns = [
     path('team/', views.team, name='team'),
     path('contact/', views.contact, name='contact'),
     path('laboratory-booking/', views.laboratory_booking, name='labBookingForm'),
+    path('FAQ/', views.faq, name='faq'),
 
 
 ]

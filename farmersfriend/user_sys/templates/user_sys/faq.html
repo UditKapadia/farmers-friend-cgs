@@ -1,0 +1,116 @@
+{% extends 'user_sys/base.html' %}{% load static %} {% block title %}Farm Education{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %}
+
+{% block body %}
+
+<div class="container-fluid tag1" style="padding-top : 30px; ">
+    <div class="container">
+    <h2 class="m-0">Frequently Asked Questions</h2>
+</div>
+
+<div class="container py-3">
+    <div class="row">
+        <div class="col-10 mx-auto">
+            <div class="accordion" id="faqExample">
+                <div class="card">
+                    <div class="card-header p-2" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Q: Which is the best kind of soil for agriculture??
+                            </button>
+                          </h5>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                        <div class="card-body">
+                            <b>Answer:</b> Loamy-textured soils are commonly described as medium textured with functionally-equal contributions of sand, silt, and clay. These medium-textured soils are often considered ideal for agriculture as they are easily cultivated by farmers and can be highly productive for crop growth.</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header p-2" id="headingTwo">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Q: How can we know which soil is best for which type of crops?
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                        <div class="card-body">
+                        <b>Answer:</b> Soil is classified into four types:
+
+                            <li>Sandy Soil</li>
+
+                            <li>Silt Soil</li> 
+
+                            <li>Clay Soil</li> 
+
+                            <li>Loamy Soil</li>
+
+                            According to the conditions the crops can pertain in we can know which soil is suited the most. Other than this soil porosity, soil structure, pore space, humidity, soil temperature also play a major role.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header p-2" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Q. Does different soil type required different types of fertilisers?
+                            </button>
+                          </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                        <div class="card-body">
+                        <b>Answer:</b>    Different soils will require differing amounts of lime to adjust the soil pH to the proper range, usually 6.5 to 7.0. The texture of the soil, organic matter content, and the crop to be grown are factors to consider in adjusting pH. For example, low organic matter soils require less lime to make the same pH change than soils high in organic matter.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header p-2" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Q.  Does use of chemical fertiliser degrade soil type?
+                            </button>
+                          </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                        <div class="card-body">
+                            <b>Answer:</b> Continuous use of these chemical fertilizers 
+                        depletes essential soil nutrients and minerals that are naturally found 
+                        in fertile soil. When we use chemical fertilizers; they do not help 
+                        replenish soil nutrients and its fertility contrary to the popular belief; but, 
+                        replenish only nitrogen, potassium and phosphorous. And we know 
+                        phosphorous does not dissolve in water and its overuse may cause 
+                        hardening of soil.
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+            
+            
+        </div>
+    </div>
+    <!--/row-->
+</div>
+<!--container-->
+
+
+<style>
+            h2 {
+                    text-align: center;
+                    color: #063a14;
+                    padding-top: 15px;
+                }
+
+            .tag1 {
+                background-color: #9fcab1f2;
+            }
+            
+</style>
+
+{% endblock body%}

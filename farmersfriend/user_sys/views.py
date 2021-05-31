@@ -133,3 +133,7 @@ def team(request):
 def contact(request):
     context = {}
     return render(request, "user_sys/contact.html", context)
+
+def faq(request):
+    context = {}
+    return render(request, "user_sys/faq.html", context)
