@@ -21,13 +21,3 @@ This is Team project.
      
 
 
-###  Description
-<img alt="Size" src="https://img.shields.io/github/repo-size/UditKapadia/farmers-friend-cgs">
-
-
-
-### Contributors
-
-<a href="https://github.com/UditKapadia/farmers-friend-cgs/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=UditKapadia/farmers-friend-cgs"/>
-</a>
