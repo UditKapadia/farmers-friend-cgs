@@ -1,0 +1,137 @@
+{% extends 'user_sys/base.html' %}{% load static %} {% block title %}Query Form| Farm Education{% endblock title %} {% block head %}
+<link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %}
+{% block body %}
+<div class="container p-4" style="margin-left:25%">
+
+    <form class="p-3" style="border: 5px solid; width:70%;" method="POST" action="">
+        {% csrf_token %}
+        <h1>Laboratory Test Booking</h1>
+        <hr>
+        <div class="form-group">
+            <label for="mobileNumber"><strong>Mobile Number</strong></label>
+            <input type="tel" class="form-control" name="mobileNumber" placeholder="Enter Mobile Number" pattern="[0-9]{10}" required>
+            <div class="valid-feedback">Contact is valid!</div>
+            <div class="invalid-feedback">Mobile Number must be 10 Digits! Contact field cannot be blank!</div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="email"><strong>Email address</strong></label>
+            <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+        </div>
+
+
+
+        <div class="form-group">
+            <label for="addressField"><strong>Address</strong></label>
+            <input type="text" class="form-control" name="addressField" placeholder="Address" required>
+            <div class="valid-feedback">Description field is valid!</div>
+            <div class="invalid-feedback">Description field cannot be blank!</div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="cityField"><strong>City</strong></label>
+                    <select type="text" class="form-control" name="cityField" required>
+                      <option disabled selected>Choose Your City</option>
+                      <option value=first>Ahmedabad</option>
+                      <option>Anand</option>
+                      <option>Amreli</option>
+                      <option>Banaskantha</option>
+                      <option>Bharuch</option>
+                      <option>Bhavnagar</option>
+                      <option>Botad</option>
+                      <option>Bhuj</option>
+                      <option>Chhota Udaipur</option>
+                      <option>Dahod</option>
+                      <option>Dang</option>
+                      <option>Gandhinagar</option>
+                      <option>Gir Somnath</option>
+                      <option>Jamnagar</option>
+                      <option>Junagadh</option>
+                      <option>Kutch</option>
+                      <option>Mehsana</option>
+                      <option>Morbi</option>
+                      <option>Narmada</option>
+                      <option>Navsari</option>
+                      <option>Patan</option>
+                      <option>Porbandar</option>
+                      <option>Rajkot</option>
+                      <option>Sabarkantha</option>
+                      <option>Surat</option>
+                      <option>Surendranagar</option>
+                      <option>Tapi</option>
+                      <option>Valsad</option>
+                      <option>Vapi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label for="stateField"><strong>State</strong></label>
+                    <select type="text" class="form-control" name="stateField" required>
+                    <option>Choose Your State</option>
+                    <option>Gujarat</option>
+                    <option>Rajasthan</option>
+                    <option>Maharahstra</option>
+                    <option>Punjab</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Haryana</option>
+                    <option>Uttar Pradesh</option>
+                    <option>Bihar</option>
+                    <option>Himachal Pradesh</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="lastCropSown"><strong>Last Crop Sown</strong></label>
+            <input type="text" class="form-control" name="lastCropSown" placeholder="Which was the last crop that you undertook?" required>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="soilType"><strong>Soil Type</strong></label>
+                    <select class="form-control" name="soilType" required>
+                    <option>Choose Your Soil Type</option>
+                    <option>Black Soil</option>
+                    <option>Red/Yellow Soil</option>
+                    <option>Aluvial Soil</option>
+                    <option>Laterite Soil</option>
+                    <option>Arid Soil</option>
+                    <option>Saline Soil</option>
+                    <option>Peaty Soil</option>
+                    <option>Forest Soil</option>
+                    <option>I don't know</option>
+                  </select>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label for="cropType"><strong>Category of Last Sown Crop</strong></label>
+                    <select class="form-control" name="cropType" required>
+                    <option>Select the Category</option>
+                    <option>Kharif</option>
+                    <option>Rabi</option>
+                    <option>Zaid</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-check p-3">
+            <input type="checkbox" class="form-check-input" id="checkBox" required>
+            <label class="form-check-label" for="checkBox">I understand and agree to all the Terms and Conditions of this test. <a href="">Click here to know more</a> </label>
+                        
+        </div>
+        <button type="submit" class="btn btn-success text-white">Submit</button>
+    </form>
+</div>
+{% endblock body %}
