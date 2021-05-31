@@ -31,6 +31,7 @@ def laboratory_booking(request):
         lab_booking_save = LaboratoryBooking(
             dateTime=dateTime, mobileNumber=mobile_num, email=email, addressField=address, cityField=city, stateField=state, lastCropSown=lastCropSown, soilType=soilType, cropType=cropType)
         lab_booking_save.save()
+        messages.success(request, 'Your form has been submitted successfully!')
 
     return render(request, "user_sys/laboratoryBookingForm.html")
 

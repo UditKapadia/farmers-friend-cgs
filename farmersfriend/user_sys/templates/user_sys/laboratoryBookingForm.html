@@ -1,6 +1,20 @@
 {% extends 'user_sys/base.html' %}{% load static %} {% block title %}Query Form| Farm Education{% endblock title %} {% block head %}
 <link rel="stylesheet" href="{% static 'user_sys/css/base.css' %}"> {% endblock head %}
 {% block body %}
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    {% endfor %}
+
+{% endif %}
+
 <div class="container p-4" style="margin-left:25%">
 
     <form class="p-3" style="border: 5px solid; width:70%;" method="POST" action="">
